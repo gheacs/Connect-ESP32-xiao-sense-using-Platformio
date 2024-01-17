@@ -10,8 +10,8 @@ void setup() {
 void loop() {
   int adcValue = analogRead(ANALOG_PIN);
 
-  // Assuming a 10-bit ADC and a reference voltage of 5V
-  float voltage = (adcValue / 1023.0) * 5.0;
+  // Assuming a 10-bit ADC and a reference voltage of 3.3V
+  float voltage = (adcValue / 4095.0) * 3.3;
 
   Serial.print("Voltage: ");
   Serial.println(voltage, 3); // Print voltage with 3 decimal places
